@@ -4,3 +4,4 @@ Nice to meet you
 再来一行哦 :)
 测试 MM 哦
 (:  :)
+测试下git diff --cached
