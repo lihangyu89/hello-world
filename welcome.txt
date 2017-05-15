@@ -5,3 +5,4 @@ Nice to meet you
 测试 MM 哦
 (:  :)
 测试下git diff --cached
+测试一下 git reset --cached
