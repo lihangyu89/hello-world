@@ -1,0 +1,81 @@
+touch a.txt  -- 建文件a.txt
+vi a.txt  -- a.txt存在时，进入a.txt编辑页面；a.txt不存在，创建a.txt并进入编辑状态
+rm a.txt -- 删除a.txt
+
+git config --global alias.lol "log --oneline --decorate --graph --all"   --给指令 "log --oneline --decorate --graph --all" 重命名为 "lol"
+
+
+git log --oneline --decorate --graph --all --图形界面查看log
+
+
+git add a.txt -- 将a文件添加到暂存区
+git commit -m'提交注释'  --将暂存区提交到历史库
+git rm a.txt --将a从历史库中删除
+git rm --cached a.txt --将a从暂存区删除
+git reset  --将暂存区清空
+git mv a.txt b.txt  --将暂存区中a.txt重名名为b.txt
+git checkout a.txt  --将a.txt从暂存区还原到工作区
+
+git branch test  -- 创建test分支
+git branch -D fix_test   --删除fix_test分支
+git checkout test --切换到test分支
+git checkout -b git --从当前分支新开分支fix_test,并切换到该分支
+
+git stash save -a 'fix_test_stash'   -将当前分支暂存区保存，取名为fix_test_stash
+git stash list   -- 查看所有stash
+git stash pop --index stash@{0}  --将保存的内容还原到暂存区(注意要在原来的分支还原)
+=(git stash apply --index stash@{0} + git stash drop stash@{0})
+git stash clear   --清空stash栈
+
+git tag --列出所有tag
+git tag 'v1' 91962f9 --在hash为91962f9开头的commit上打tag v1
+git tag -a 'INITIAL_COMMIT' --在当前分支打声明式tag
+git tag -a 'v3' 91962f9 --在hash为91962f9开头的commit上打声明式tag v3
+
+git merge test_merge  --将分支合并到当前分支
+git merge --abort  --合并冲突后放弃本次合并
+
+=======查看历史=======
+git show v0/master   --查看tag v0 或master最近的一次提交
+git diff  --工作区和暂存区的差异
+git diff --cached  --暂存区和历史区的差异
+git diff --color-words  --只显示局部差异，用颜色区分
+git diff --word-diff   --只显示局部差异，用大括号区分
+
+
+=====还原======
+git checkout master.txt  --用暂存区内容覆盖工作区内容
+git checkout efb0869 rollback.txt  --用历史库efb0869的提交文件 rollback.txt 还原工作区可暂存区
+
+git reset master.txt   --将历史区HEAD的master.txt文件覆盖暂存区
+git reset efb0869 rollback.txt  --用历史库efb0869的提交文件 rollback.txt 只还原暂存区
+
+git clean -n  --查看将要别被删除的文件(忽略ignore中文件)
+git clean -f  --强制删除所有文件
+git clean -f a --强制删除a文件
+
+git commit --amend  --用当前暂存区的提交覆盖上一个提交
+git rebase test_rebase  --test_rebase先行合并到当前分支
+git rebase --continue  --rebase遇到冲突，解决后，继续合并
+
+git reflog --查看HEAD移动轨迹
+git reset --hard HEAD@{5}  --回滚到HEAD@{5},并还原暂存区和工作区
+git reset --mixed HEAD@{5}  --回滚到HEAD@{5},并还原暂存区
+git reset --soft HEAD@{5}  --回滚到HEAD@{5},但不修改工作区和暂存区
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
