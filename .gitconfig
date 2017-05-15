@@ -1,0 +1,12 @@
+[user]
+	name = lee
+	email = lee@sina.com
+[color]
+	ui = true
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+	tg = tag
+	lol = log --oneline --decorate --graph --all

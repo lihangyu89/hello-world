@@ -1,3 +1,8 @@
+======git全局配置文件=======
+C:\Users\Administrator\.gitconfig
+
+
+
 touch a.txt  -- 建文件a.txt
 vi a.txt  -- a.txt存在时，进入a.txt编辑页面；a.txt不存在，创建a.txt并进入编辑状态
 rm a.txt -- 删除a.txt
