@@ -1,72 +1,72 @@
-======gitÈ«¾ÖÅäÖÃÎÄ¼ş=======
+ï»¿======gitå…¨å±€é…ç½®æ–‡ä»¶=======
 C:\Users\Administrator\.gitconfig
 
 
 
-touch a.txt  -- ½¨ÎÄ¼şa.txt
-vi a.txt  -- a.txt´æÔÚÊ±£¬½øÈëa.txt±à¼­Ò³Ãæ£»a.txt²»´æÔÚ£¬´´½¨a.txt²¢½øÈë±à¼­×´Ì¬
-rm a.txt -- É¾³ıa.txt
+touch a.txt  -- å»ºæ–‡ä»¶a.txt
+vi a.txt  -- a.txtå­˜åœ¨æ—¶ï¼Œè¿›å…¥a.txtç¼–è¾‘é¡µé¢ï¼›a.txtä¸å­˜åœ¨ï¼Œåˆ›å»ºa.txtå¹¶è¿›å…¥ç¼–è¾‘çŠ¶æ€
+rm a.txt -- åˆ é™¤a.txt
 
-git config --global alias.lol "log --oneline --decorate --graph --all"   --¸øÖ¸Áî "log --oneline --decorate --graph --all" ÖØÃüÃûÎª "lol"
-
-
-git log --oneline --decorate --graph --all --Í¼ĞÎ½çÃæ²é¿´log
+git config --global alias.lol "log --oneline --decorate --graph --all"   --ç»™æŒ‡ä»¤ "log --oneline --decorate --graph --all" é‡å‘½åä¸º "lol"
 
 
-git add a.txt -- ½«aÎÄ¼şÌí¼Óµ½Ôİ´æÇø
-git commit -m'Ìá½»×¢ÊÍ'  --½«Ôİ´æÇøÌá½»µ½ÀúÊ·¿â
-git rm a.txt --½«a´ÓÀúÊ·¿âÖĞÉ¾³ı
-git rm --cached a.txt --½«a´ÓÔİ´æÇøÉ¾³ı
-git reset  --½«Ôİ´æÇøÇå¿Õ
-git mv a.txt b.txt  --½«Ôİ´æÇøÖĞa.txtÖØÃûÃûÎªb.txt
-git checkout a.txt  --½«a.txt´ÓÔİ´æÇø»¹Ô­µ½¹¤×÷Çø
+git log --oneline --decorate --graph --all --å›¾å½¢ç•Œé¢æŸ¥çœ‹log
 
-git branch test  -- ´´½¨test·ÖÖ§
-git branch -D fix_test   --É¾³ıfix_test·ÖÖ§
-git checkout test --ÇĞ»»µ½test·ÖÖ§
-git checkout -b git --´Óµ±Ç°·ÖÖ§ĞÂ¿ª·ÖÖ§fix_test,²¢ÇĞ»»µ½¸Ã·ÖÖ§
 
-git stash save -a 'fix_test_stash'   -½«µ±Ç°·ÖÖ§Ôİ´æÇø±£´æ£¬È¡ÃûÎªfix_test_stash
-git stash list   -- ²é¿´ËùÓĞstash
-git stash pop --index stash@{0}  --½«±£´æµÄÄÚÈİ»¹Ô­µ½Ôİ´æÇø(×¢ÒâÒªÔÚÔ­À´µÄ·ÖÖ§»¹Ô­)
+git add a.txt -- å°†aæ–‡ä»¶æ·»åŠ åˆ°æš‚å­˜åŒº
+git commit -m'æäº¤æ³¨é‡Š'  --å°†æš‚å­˜åŒºæäº¤åˆ°å†å²åº“
+git rm a.txt --å°†aä»å†å²åº“ä¸­åˆ é™¤
+git rm --cached a.txt --å°†aä»æš‚å­˜åŒºåˆ é™¤
+git reset  --å°†æš‚å­˜åŒºæ¸…ç©º
+git mv a.txt b.txt  --å°†æš‚å­˜åŒºä¸­a.txté‡ååä¸ºb.txt
+git checkout a.txt  --å°†a.txtä»æš‚å­˜åŒºè¿˜åŸåˆ°å·¥ä½œåŒº
+
+git branch test  -- åˆ›å»ºteståˆ†æ”¯
+git branch -D fix_test   --åˆ é™¤fix_teståˆ†æ”¯
+git checkout test --åˆ‡æ¢åˆ°teståˆ†æ”¯
+git checkout -b git --ä»å½“å‰åˆ†æ”¯æ–°å¼€åˆ†æ”¯fix_test,å¹¶åˆ‡æ¢åˆ°è¯¥åˆ†æ”¯
+
+git stash save -a 'fix_test_stash'   -å°†å½“å‰åˆ†æ”¯æš‚å­˜åŒºä¿å­˜ï¼Œå–åä¸ºfix_test_stash
+git stash list   -- æŸ¥çœ‹æ‰€æœ‰stash
+git stash pop --index stash@{0}  --å°†ä¿å­˜çš„å†…å®¹è¿˜åŸåˆ°æš‚å­˜åŒº(æ³¨æ„è¦åœ¨åŸæ¥çš„åˆ†æ”¯è¿˜åŸ)
 =(git stash apply --index stash@{0} + git stash drop stash@{0})
-git stash clear   --Çå¿ÕstashÕ»
+git stash clear   --æ¸…ç©ºstashæ ˆ
 
-git tag --ÁĞ³öËùÓĞtag
-git tag 'v1' 91962f9 --ÔÚhashÎª91962f9¿ªÍ·µÄcommitÉÏ´òtag v1
-git tag -a 'INITIAL_COMMIT' --ÔÚµ±Ç°·ÖÖ§´òÉùÃ÷Ê½tag
-git tag -a 'v3' 91962f9 --ÔÚhashÎª91962f9¿ªÍ·µÄcommitÉÏ´òÉùÃ÷Ê½tag v3
+git tag --åˆ—å‡ºæ‰€æœ‰tag
+git tag 'v1' 91962f9 --åœ¨hashä¸º91962f9å¼€å¤´çš„commitä¸Šæ‰“tag v1
+git tag -a 'INITIAL_COMMIT' --åœ¨å½“å‰åˆ†æ”¯æ‰“å£°æ˜å¼tag
+git tag -a 'v3' 91962f9 --åœ¨hashä¸º91962f9å¼€å¤´çš„commitä¸Šæ‰“å£°æ˜å¼tag v3
 
-git merge test_merge  --½«·ÖÖ§ºÏ²¢µ½µ±Ç°·ÖÖ§
-git merge --abort  --ºÏ²¢³åÍ»ºó·ÅÆú±¾´ÎºÏ²¢
+git merge test_merge  --å°†åˆ†æ”¯åˆå¹¶åˆ°å½“å‰åˆ†æ”¯
+git merge --abort  --åˆå¹¶å†²çªåæ”¾å¼ƒæœ¬æ¬¡åˆå¹¶
 
-=======²é¿´ÀúÊ·=======
-git show v0/master   --²é¿´tag v0 »òmaster×î½üµÄÒ»´ÎÌá½»
-git diff  --¹¤×÷ÇøºÍÔİ´æÇøµÄ²îÒì
-git diff --cached  --Ôİ´æÇøºÍÀúÊ·ÇøµÄ²îÒì
-git diff --color-words  --Ö»ÏÔÊ¾¾Ö²¿²îÒì£¬ÓÃÑÕÉ«Çø·Ö
-git diff --word-diff   --Ö»ÏÔÊ¾¾Ö²¿²îÒì£¬ÓÃ´óÀ¨ºÅÇø·Ö
+=======æŸ¥çœ‹å†å²=======
+git show v0/master   --æŸ¥çœ‹tag v0 æˆ–masteræœ€è¿‘çš„ä¸€æ¬¡æäº¤
+git diff  --å·¥ä½œåŒºå’Œæš‚å­˜åŒºçš„å·®å¼‚
+git diff --cached  --æš‚å­˜åŒºå’Œå†å²åŒºçš„å·®å¼‚
+git diff --color-words  --åªæ˜¾ç¤ºå±€éƒ¨å·®å¼‚ï¼Œç”¨é¢œè‰²åŒºåˆ†
+git diff --word-diff   --åªæ˜¾ç¤ºå±€éƒ¨å·®å¼‚ï¼Œç”¨å¤§æ‹¬å·åŒºåˆ†
 
 
-=====»¹Ô­======
-git checkout master.txt  --ÓÃÔİ´æÇøÄÚÈİ¸²¸Ç¹¤×÷ÇøÄÚÈİ
-git checkout efb0869 rollback.txt  --ÓÃÀúÊ·¿âefb0869µÄÌá½»ÎÄ¼ş rollback.txt »¹Ô­¹¤×÷Çø¿ÉÔİ´æÇø
+=====è¿˜åŸ======
+git checkout master.txt  --ç”¨æš‚å­˜åŒºå†…å®¹è¦†ç›–å·¥ä½œåŒºå†…å®¹
+git checkout efb0869 rollback.txt  --ç”¨å†å²åº“efb0869çš„æäº¤æ–‡ä»¶ rollback.txt è¿˜åŸå·¥ä½œåŒºå¯æš‚å­˜åŒº
 
-git reset master.txt   --½«ÀúÊ·ÇøHEADµÄmaster.txtÎÄ¼ş¸²¸ÇÔİ´æÇø
-git reset efb0869 rollback.txt  --ÓÃÀúÊ·¿âefb0869µÄÌá½»ÎÄ¼ş rollback.txt Ö»»¹Ô­Ôİ´æÇø
+git reset master.txt   --å°†å†å²åŒºHEADçš„master.txtæ–‡ä»¶è¦†ç›–æš‚å­˜åŒº
+git reset efb0869 rollback.txt  --ç”¨å†å²åº“efb0869çš„æäº¤æ–‡ä»¶ rollback.txt åªè¿˜åŸæš‚å­˜åŒº
 
-git clean -n  --²é¿´½«Òª±ğ±»É¾³ıµÄÎÄ¼ş(ºöÂÔignoreÖĞÎÄ¼ş)
-git clean -f  --Ç¿ÖÆÉ¾³ıËùÓĞÎÄ¼ş
-git clean -f a --Ç¿ÖÆÉ¾³ıaÎÄ¼ş
+git clean -n  --æŸ¥çœ‹å°†è¦åˆ«è¢«åˆ é™¤çš„æ–‡ä»¶(å¿½ç•¥ignoreä¸­æ–‡ä»¶)
+git clean -f  --å¼ºåˆ¶åˆ é™¤æ‰€æœ‰æ–‡ä»¶
+git clean -f a --å¼ºåˆ¶åˆ é™¤aæ–‡ä»¶
 
-git commit --amend  --ÓÃµ±Ç°Ôİ´æÇøµÄÌá½»¸²¸ÇÉÏÒ»¸öÌá½»
-git rebase test_rebase  --test_rebaseÏÈĞĞºÏ²¢µ½µ±Ç°·ÖÖ§
-git rebase --continue  --rebaseÓöµ½³åÍ»£¬½â¾öºó£¬¼ÌĞøºÏ²¢
+git commit --amend  --ç”¨å½“å‰æš‚å­˜åŒºçš„æäº¤è¦†ç›–ä¸Šä¸€ä¸ªæäº¤
+git rebase test_rebase  --test_rebaseå…ˆè¡Œåˆå¹¶åˆ°å½“å‰åˆ†æ”¯
+git rebase --continue  --rebaseé‡åˆ°å†²çªï¼Œè§£å†³åï¼Œç»§ç»­åˆå¹¶
 
-git reflog --²é¿´HEADÒÆ¶¯¹ì¼£
-git reset --hard HEAD@{5}  --»Ø¹öµ½HEAD@{5},²¢»¹Ô­Ôİ´æÇøºÍ¹¤×÷Çø
-git reset --mixed HEAD@{5}  --»Ø¹öµ½HEAD@{5},²¢»¹Ô­Ôİ´æÇø
-git reset --soft HEAD@{5}  --»Ø¹öµ½HEAD@{5},µ«²»ĞŞ¸Ä¹¤×÷ÇøºÍÔİ´æÇø
+git reflog --æŸ¥çœ‹HEADç§»åŠ¨è½¨è¿¹
+git reset --hard HEAD@{5}  --å›æ»šåˆ°HEAD@{5},å¹¶è¿˜åŸæš‚å­˜åŒºå’Œå·¥ä½œåŒº
+git reset --mixed HEAD@{5}  --å›æ»šåˆ°HEAD@{5},å¹¶è¿˜åŸæš‚å­˜åŒº
+git reset --soft HEAD@{5}  --å›æ»šåˆ°HEAD@{5},ä½†ä¸ä¿®æ”¹å·¥ä½œåŒºå’Œæš‚å­˜åŒº
 
 
 
